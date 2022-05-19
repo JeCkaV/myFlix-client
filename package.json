@@ -2,12 +2,12 @@
   "name": "myflix-client",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
+  "default": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"    
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JeCkaV/myFlix-client.git"
@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/JeCkaV/myFlix-client#readme",
   "dependencies": {
+    "parcel": "^2.0.0-rc.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-rc.0"
   }
 }
