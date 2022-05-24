@@ -1,10 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import { Row, Col } from 'react-bootstrap';
 
 import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { NavigationbarView } from '../navigationbar-view/navigationbar-view';
 
 const inLogo = require('../../img/Inception.jpg');
 const tsLogo = require('../../img/ShawshankRedemption.jpg');
@@ -65,6 +67,7 @@ export class MainView extends React.Component {
     //if user is no logged in - force a login form
     if (!user) {
       return (
+        <NavigationbarView />,
         <LoginView
           onLoggedIn={(user) => this.onLoggedIn(user)}
           onRegister={(bool) => this.onRegister(bool)}
@@ -75,25 +78,19 @@ export class MainView extends React.Component {
     if (movies.length === 0) return <div className="main-view" />;
   
     return (
-      <div className="main-vew">
-        {selectedMovie ? (
-          <MovieView
-            movie={selectedMovie}
-            onBackClick={(newSelectedMovie) => {
-              this.setSelectedMovie(newSelectedMovie);
-            }}
-          />
-        ) : (
-          movies.map((movie) => (
-            <MovieCard
-              key={movie._id}
-              movie={movie}
-              onMovieClick={(movie) => {
-                this.setSelectedMovie(movie);
-              }}
-            />
+      <div className="main-view">
+        {selectedMovie
+          ? (
+            <Row className="justify-content-md-center">
+              <Col md={8}>
+                <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
+              </Col>
+            </Row>
+          )
+          : movies.map(movie => (
+            <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
           ))
-        )}
+        }
       </div>
     );
   }
