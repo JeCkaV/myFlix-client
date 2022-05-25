@@ -1,7 +1,6 @@
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
-
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
 

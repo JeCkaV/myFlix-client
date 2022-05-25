@@ -1,5 +1,26 @@
 
 
+.poster {
+  height: auto;
+  opacity: 1 !important;
+  cursor: default !important;
+  max-width: 25rem !important;
+}
+
+
+
+
+
+.navbar {
+  height: 6rem;
+  font-family: Bebas Neue, San Francisco, Helvetica Neue;
+  font-size: 2rem;
+}
+
+.navbar-brand {
+  font-size: xxx-large !important;
+}
+
 
 
 
@@ -9,11 +30,5 @@
 .my-flix {
   color: #4682b4;
 }
-
-
-
-
-
-
 
 /*# sourceMappingURL=index.e3f97e84.css.map */

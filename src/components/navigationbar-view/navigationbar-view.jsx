@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import './navigationbar-view.scss';
 
@@ -26,7 +27,7 @@ export function NavbarView() {
       <>
     <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
 		<Container>
-		<Navbar.Brand href="#home">MyFlix</Navbar.Brand>
+		<Navbar.Brand href="#home">MyFlix list of movies</Navbar.Brand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 				{isAuth() && (
