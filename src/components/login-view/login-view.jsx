@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { Link, useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import './login-view.scss';
@@ -15,7 +15,6 @@ export function LoginView(props) {
   const [usernameErr, setUsernameErr] = useState('');
   const [passwordErr, setPasswordErr] = useState('');
 
-  const navigate = useNavigate();
 
   //validation of registration data
   const validate = () => {
