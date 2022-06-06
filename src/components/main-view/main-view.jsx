@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import { connect } from 'react-redux';
 
+import { Router, Row, Col } from 'react-bootstrap';
+
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // #0
