@@ -20,9 +20,10 @@ export function setFilter(value) {
 }
 
 export function setUser(user) {
+    console.log("SETUSER", user)
     return {
         type: SET_USER,
-        user: user?.Username
+        user: user
     };
 }
 

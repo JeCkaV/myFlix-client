@@ -1,7 +1,5 @@
 
 
-
-
 .navbar {
   height: 6rem;
   font-family: Bebas Neue, San Francisco, Helvetica Neue;
@@ -10,6 +8,41 @@
 
 .navbar-brand {
   font-size: xxx-large !important;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #4169e1;
+}
+
+#registration-view-container {
+  margin-top: 25px;
+}
+
+#registration-view-card-title {
+  font-size: xx-large;
+}
+
+#registration-view-button {
+  margin-top: 10px;
+}
+
+.poster {
+  height: auto;
+  opacity: 1 !important;
+  cursor: default !important;
+  max-width: 25rem !important;
+}
+
+
+
+
+
+
+
+* {
+  background-color: #000;
 }
 
 .my-flix {
