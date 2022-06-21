@@ -12,7 +12,7 @@ export function MovieView(props) {
   const baseURL = 'https://radiant-depths-97196.herokuapp.com//';
       
   //Destructuring the params Object
-  const navigate = useNavigate();
+  const {navigate} = useNavigate();
   const {movie_id} = useParams();
   const accessToken = localStorage.getItem('token');
   const activeUser = localStorage.getItem('user');
