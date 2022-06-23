@@ -1,3 +1,16 @@
+.poster {
+  height: auto;
+  opacity: 1 !important;
+  cursor: default !important;
+  max-width: 25rem !important;
+}
+
+
+
+
+
+
+
 
 
 .navbar {
@@ -28,19 +41,6 @@
   margin-top: 10px;
 }
 
-.poster {
-  height: auto;
-  opacity: 1 !important;
-  cursor: default !important;
-  max-width: 25rem !important;
-}
-
-
-
-
-
-
-
 .btn-primary {
   color: #fff;
   background-color: #0d4470;
@@ -63,4 +63,4 @@
   color: #a1b7ca;
 }
 
-/*# sourceMappingURL=index.e3f97e84.css.map */
+/*# sourceMappingURL=index.5f1df611.css.map */
