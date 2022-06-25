@@ -36,7 +36,7 @@ export function NavbarView() {
 								  <Nav.Link href="#api">Movies</Nav.Link>
 							  </Link>
 							  <Link to="/profile">
-								  <Nav.Link href="#portfolio">Profile</Nav.Link>
+								<Nav.Link href={`/users/${user}`}>Profile</Nav.Link>
 							  </Link>
 						  		</Nav>
 								  <Nav className="mx-auto">
