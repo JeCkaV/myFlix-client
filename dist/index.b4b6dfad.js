@@ -45418,12 +45418,12 @@ function NavbarView() {
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                                 to: "/profile",
                                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
-                                                    href: "#portfolio",
+                                                    href: `/users/${user}`,
                                                     children: "Profile"
                                                 }, void 0, false, {
                                                     fileName: "src/components/navigationbar-view/navigationbar-view.jsx",
                                                     lineNumber: 39,
-                                                    columnNumber: 11
+                                                    columnNumber: 9
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/components/navigationbar-view/navigationbar-view.jsx",
@@ -45521,7 +45521,7 @@ $RefreshReg$(_c, "NavbarView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"cHIiW","./navigationbar-view.scss":"jOXH7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jOXH7":[function() {},{}],"9YtA0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./navigationbar-view.scss":"jOXH7","react-router-dom":"cHIiW"}],"jOXH7":[function() {},{}],"9YtA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9fee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
