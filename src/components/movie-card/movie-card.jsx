@@ -4,9 +4,6 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Button, Card } from 'react-bootstrap';
 
-import heartEmpty from '../../img/heart-empty.png';
-import heartFull from '../../img/heart-full.png';
-
 //importing stylesheet
 import './movie-card.scss';
 

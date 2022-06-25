@@ -1,0 +1,41 @@
+#bs-override .card-title,
+#bs-override .card-text {
+  color: #000;
+}
+
+#bs-override .custom-movie-card {
+  min-height: 624px;
+  margin-bottom: 30px;
+
+
+  .card-img {
+    width: fit-content;
+    position: absolute
+  }
+
+  .card-img-top {
+    max-height: 500px;
+  }
+
+  .card-body-list {
+    height: 260px;
+  }
+}
+
+#bs-override .card-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#bs-override .btn.btn-link {
+  color: white;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#bs-override .card-title {
+  font-weight: bold;
+}

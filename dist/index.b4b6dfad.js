@@ -37416,10 +37416,6 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactBootstrap = require("react-bootstrap");
-var _heartEmptyPng = require("../../img/heart-empty.png");
-var _heartEmptyPngDefault = parcelHelpers.interopDefault(_heartEmptyPng);
-var _heartFullPng = require("../../img/heart-full.png");
-var _heartFullPngDefault = parcelHelpers.interopDefault(_heartFullPng);
 //importing stylesheet
 var _movieCardScss = require("./movie-card.scss");
 class MovieCard extends (0, _reactDefault.default).Component {
@@ -37483,7 +37479,7 @@ class MovieCard extends (0, _reactDefault.default).Component {
                     crossOrigin: "anonymous"
                 }, void 0, false, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 80,
+                    lineNumber: 77,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Body, {
@@ -37495,20 +37491,20 @@ class MovieCard extends (0, _reactDefault.default).Component {
                                     children: movie.Title
                                 }, void 0, false, {
                                     fileName: "src/components/movie-card/movie-card.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 80,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
                                     children: movie.Description
                                 }, void 0, false, {
                                     fileName: "src/components/movie-card/movie-card.jsx",
-                                    lineNumber: 84,
+                                    lineNumber: 81,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 82,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -37517,24 +37513,24 @@ class MovieCard extends (0, _reactDefault.default).Component {
                                 children: "Open"
                             }, void 0, false, {
                                 fileName: "src/components/movie-card/movie-card.jsx",
-                                lineNumber: 87,
+                                lineNumber: 84,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/movie-card/movie-card.jsx",
-                            lineNumber: 86,
+                            lineNumber: 83,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 81,
+                    lineNumber: 78,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/movie-card/movie-card.jsx",
-            lineNumber: 79,
+            lineNumber: 76,
             columnNumber: 7
         }, this);
     }
@@ -37559,7 +37555,7 @@ MovieCard.propTypes = {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","axios":"jo6P5","prop-types":"7wKI2","react-bootstrap":"3AD9A","../../img/heart-empty.png":"cLAz2","../../img/heart-full.png":"ixS1r","./movie-card.scss":"d6HH4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AD9A":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","axios":"jo6P5","prop-types":"7wKI2","react-bootstrap":"3AD9A","./movie-card.scss":"d6HH4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AD9A":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Accordion", ()=>(0, _accordionDefault.default));
@@ -45346,47 +45342,7 @@ function createUtilityClassName(utilityValues, breakpoints = (0, _themeProvider.
 }
 exports.default = createUtilityClassName;
 
-},{"prop-types":"7wKI2","./ThemeProvider":"dVixI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cLAz2":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "heart-empty.406b76e1.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"ixS1r":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "heart-full.17637628.png" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"d6HH4":[function() {},{}],"jThTW":[function(require,module,exports) {
+},{"prop-types":"7wKI2","./ThemeProvider":"dVixI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d6HH4":[function() {},{}],"jThTW":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$1201 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
