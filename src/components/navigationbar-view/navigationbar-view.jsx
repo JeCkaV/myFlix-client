@@ -38,9 +38,6 @@ export function NavbarView() {
 							  <Link to="/profile">
 								  <Nav.Link href="#portfolio">Profile</Nav.Link>
 							  </Link>
-							  {/* <Link to="/favourites">
-								  <Nav.Link href="#favourites">Favourites</Nav.Link>
-							  </Link> */}
 						  		</Nav>
 								  <Nav className="mx-auto">
 								  <Nav.Link href="#logout" onClick={() => onLoggedOut()}>
@@ -48,6 +45,17 @@ export function NavbarView() {
 								  </Nav.Link>
 								  <Nav.Link disabled>{user}</Nav.Link>
 							  </Nav></>
+				)}
+				{!isAuth() && (
+					<>
+						<Nav className="mx-auto">
+							<Nav.Link href="#login" onClick={() => onLoggedOut()}>
+									  Login
+							</Nav.Link>
+							<Nav.Link href="/register" onClick={() => onLoggedOut()}>
+									  Signup
+							</Nav.Link>
+						</Nav></>
 				)}
 				</Navbar.Collapse>
 		</Container>

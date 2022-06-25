@@ -42,7 +42,7 @@ class MainView extends React.Component {
         console.log(accessToken)
         if (accessToken !== null) {
             console.log('before axios')
-            axios.get('https://radiant-depths-97196.herokuapp.com/users/${user}', {
+            axios.get(`https://radiant-depths-97196.herokuapp.com/users/${user}`, {
                 headers: { Authorization: `Bearer ${accessToken}`}
             })
             .then(res => {
@@ -112,6 +112,7 @@ class MainView extends React.Component {
         const { movies, user } = this.state;
         // const { movies, user } = this.props;
         console.log('logged in: ', user);
+        console.log("Full User? --> ", this.state.fullUser)
 
         return (
             <Router>

@@ -47,14 +47,15 @@ export function RegistrationView() {
         return isReq;
       };
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const isReq = validate();
         if (isReq) {
             axios.post('https://radiant-depths-97196.herokuapp.com/users', {
-                username: username,
-                password: password,
-                email: email,
-                birthday: birthday
+                Username: username,
+                Password: password,
+                Email: email,
+                Birthday: birthday
             })
             .then(response => {
                 const data = response.data;

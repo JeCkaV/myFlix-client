@@ -63,31 +63,6 @@ export class MovieCard extends React.Component {
       });
   }
 
-  favMovieClick(e) {
-    e.preventDefault();
-    if (this.state.favorited) {
-      this.setState({
-        favorited: false,
-      });
-      this.removeFavMovie(this.state.movieId);
-      this.props.updateFavorites(this.state.movieId);
-    } else {
-      this.setState({
-        favorited: true,
-      });
-      this.addFavMovie(this.state.movieId);
-      this.props.updateFavorites(this.state.movieId);
-    }
-  }
-
-  favMovieHandle(fav) {
-    if (fav) {
-      return heartFull;
-    } else {
-      return heartEmpty;
-    }
-  }
-
   componentDidMount() {
     const accessToken = localStorage.getItem('token');
     this.setState({
@@ -99,32 +74,17 @@ export class MovieCard extends React.Component {
 
   render() {
     const { movie, isFavorite, favorites } = this.props;
+    console.log("Movie Image path", movie.ImagePath)
     return (
-      <Card className="h-100 mcard">
-        <div className="poster-wrapper">
-          <Card.Img
-            crossOrigin="anonymous"
-            variant="top"
-            src={movie.ImagePath}
-            className="poster-img"
-          />
-        </div>
-
-        <a href="#" onClick={(e) => this.favMovieClick(e)}>
-          <img
-            src={this.favMovieHandle(this.state.favorited)}
-            className="fav-icon"
-            alt="cam"
-          />
-        </a>
-
-        <Card.Body className="d-flex flex-column">
-          <Card.Title>{movie.Title}</Card.Title>
-          <Card.Text>{movie.Genre.Name}</Card.Text>
-          <Link className="mt-auto mov-link" to={`/movies/${movie._id}`}>
-            <Button className="mov-button" variant="secondary">
-              Open
-            </Button>
+      <Card className="movie-card custom-movie-card">
+        <Card.Img variant="top" src={movie.ImagePath} crossOrigin="anonymous" />
+        <Card.Body className="card-body-list">
+          <div>
+            <Card.Title>{movie.Title}</Card.Title>
+            <Card.Text>{movie.Description}</Card.Text>
+          </div>
+          <Link to={`/movies/${movie._id}`}>
+            <Button>Open</Button>
           </Link>
         </Card.Body>
       </Card>
