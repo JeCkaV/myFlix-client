@@ -72,11 +72,66 @@
   max-width: 25rem !important;
 }
 
+#bs-override .director-text {
+  color: #000;
+}
 
+#bs-override .director-text h1 {
+  margin-bottom: 40px;
+}
 
+#bs-override .genre-text {
+  color: #000;
+}
 
+#bs-override .genre-text h1 {
+  margin-bottom: 40px;
+}
 
+#bs-override .profile-view {
+  color: #000;
+}
 
+#bs-override .profile-view .icon {
+  margin-right: 4px;
+}
+
+#bs-override .profile-view .accordion-button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+#bs-override .profile-view .card {
+  border-radius: 0;
+}
+
+#bs-override .profile-view .delete-btn {
+  color: red;
+  height: 40px;
+  border: 1px solid red;
+  font-size: 1rem;
+}
+
+#bs-override .favorite-view {
+  border: none;
+  margin-top: 12px;
+}
+
+#bs-override .favorite-view .fav-item {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+#bs-override .favorite-view .fav-item p {
+  margin: 0;
+}
 
 .btn-primary {
   color: #fff;

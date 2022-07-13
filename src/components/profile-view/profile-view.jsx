@@ -6,7 +6,7 @@ import './profile-view.scss';
 
 import {UpdateView} from './update-view'
 import {UserView} from './user-view'
-import {FavouritesView} from './favourite-view'
+import {FavoritesView} from './favorite-view'
 
 export function ProfileView(props) {
 
@@ -103,7 +103,7 @@ console.log(baseURL+ 'users/'+user.Username)
                         <Row className="justify-content-center">
                                 <UserView user={user} />
                                 <Col md={12}>
-                                  <FavouritesView user={user} movies={movies} />
+                                  <FavoritesView user={user} movies={movies} />
                               </Col>
                         </Row>
                         : 

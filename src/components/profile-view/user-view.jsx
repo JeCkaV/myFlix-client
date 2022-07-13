@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Button, Row, Col, Spinner, ListGroup} from 'react-bootstrap';
 import { UpdateView } from './update-view';
-import { FavouritesView } from './favourite-view';
+import { FavoritesView } from './favorite-view';
 
 export function UserView(props) {
 

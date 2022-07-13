@@ -3,12 +3,12 @@ import {Card, Link, Button, Row, Col, Image, Stack, Spinner} from 'react-bootstr
 import axios from 'axios';
 import { MovieCard} from '../movie-card/movie-card'
 
-export function FavouritesView(props) {
+export function FavoritesView(props) {
 
   const baseURL = 'https://radiant-depths-97196.herokuapp.com//';
   
   const [user, setUser] = useState(props.user);
-  const [favouriteMovies, setFavouriteMovies] = useState('');
+  const [favoriteMovies, setFavoriteMovies] = useState('');
   const [movies, setMovies] = useState(props.movies);
  
   //Setting loading and error variables 
@@ -21,7 +21,7 @@ export function FavouritesView(props) {
   useEffect(() => {
     
     movies.forEach(movie => {
-                    if (user.FavoriteMovies.includes(movie._id)) setFavouriteMovies(prevData => {
+                    if (user.FavoriteMovies.includes(movie._id)) setFavoriteMovies(prevData => {
                         return [...prevData, movie]
                     })
                   })
@@ -48,7 +48,7 @@ export function FavouritesView(props) {
       axios.delete(baseURL+'users/'+ activeUser +'/favs/'+ movieToRemove, { headers: { Authorization: `Bearer ${accessToken}`} })
         .then(response => {
                   console.log(response.data);
-          setFavouriteMovies(favouriteMovies.filter(mov => mov._id != movieToRemove))
+          setFavoriteMovies(favoriteMovies.filter(mov => mov._id != movieToRemove))
           })
               .catch(error => {
           console.log(error);
@@ -77,14 +77,14 @@ export function FavouritesView(props) {
 
     return(
 		<>
-		<Row className="justify-content-center my-3"><Col><div className="h6 text-muted text-center m-1 p-2">Favourite Movies</div></Col></Row>
+		<Row className="justify-content-center my-3"><Col><div className="h6 text-muted text-center m-1 p-2">Favorite Movies</div></Col></Row>
 		<Row className="justify-content-center">
 			<Col>
 				<>
 					{<Row className="main-view justify-content-md-evenly m-0 p-2 align-items-start">
-						{(favouriteMovies.length > 0) 
-						? favouriteMovies.map(movie => (<Col md={3} key={movie._id}>{cardUnit(movie)}</Col>)) 
-						: <Col><div className="h6 text-muted text-center">You have not added yet a favourite movie</div></Col>}
+						{(favoriteMovies.length > 0) 
+						? favoriteMovies.map(movie => (<Col md={3} key={movie._id}>{cardUnit(movie)}</Col>)) 
+						: <Col><div className="h6 text-muted text-center">You have not added yet a favorite movie</div></Col>}
 					</Row>}
 				</>
 			
