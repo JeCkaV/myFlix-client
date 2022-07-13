@@ -7,58 +7,14 @@ import PropTypes from 'prop-types';
 
 import './director-view.scss';
 
-export function DirectorView() {
+export function DirectorView(props) {
 
-  const baseURL = 'https://radiant-depths-97196.herokuapp.com/';
-  const [director, setDirector ] = useState('');
-  const [movies, setMovies] = useState('');
-  const [directorMovies, setDirectorMovies] = useState('');
+  const { director } = props;
+  console.log(director)
 
-  //Setting loading and error variables 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState();
-
-  const {director_id} = useParams();
-
-  useEffect(() => {
-    let accessToken = localStorage.getItem('token');
-      getMissingData(accessToken)
-    },[])
-
-    async function getMissingData(accessToken) {
-      axios.all([
-            axios(baseURL + 'directors/' + director_id,{ headers: { Authorization: `Bearer ${accessToken}`} } ),
-            axios(baseURL + 'movies/',{ headers: { Authorization: `Bearer ${accessToken}`} } )
-            ])
-              .then(axios.spread((directorData, moviesData) => {
-                setDirector(directorData.data)
-                setMovies(moviesData.data)
-                moviesData.data.forEach(movie => {
-                  if (movie.Director === director_id) setDirectorMovies(prevData => {
-                      return [...prevData, movie]
-                  })
-                })
-              }))
-              .catch(error => console.error(error))
-              .finally(() => {
-                setLoading(false)
-              })												
-    }
-     
-    //While data is not showed - show spinner
-if (loading) {
-  return <Row className="justify-content-center my-5">
-        <div className="h3 text-muted text-center">Data is loading
-          &nbsp;<Spinner animation="border" variant="secondary" role="status" />
-        </div>
-      </Row>		
- }
-
-if (error) {
-  return <Row className="justify-content-center my-5">
-    <p>There was an error loading your data!</p>
-    </Row>
-}
+  if (!director) {
+    return <><h3>Loading..</h3></>
+  }
 
 return (
   <>  

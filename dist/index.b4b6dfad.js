@@ -46180,89 +46180,7 @@ var _reactRouterDom = require("react-router-dom");
 var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _directorViewScss = require("./director-view.scss");
-var _s = $RefreshSig$();
-function DirectorView() {
-    _s();
-    const baseURL = "https://radiant-depths-97196.herokuapp.com/";
-    const [director, setDirector] = (0, _react.useState)("");
-    const [movies, setMovies] = (0, _react.useState)("");
-    const [directorMovies, setDirectorMovies] = (0, _react.useState)("");
-    //Setting loading and error variables 
-    const [loading, setLoading] = (0, _react.useState)(true);
-    const [error1, setError] = (0, _react.useState)();
-    const { director_id  } = (0, _reactRouterDom.useParams)();
-    (0, _react.useEffect)(()=>{
-        let accessToken = localStorage.getItem("token");
-        getMissingData(accessToken);
-    }, []);
-    async function getMissingData(accessToken) {
-        (0, _axiosDefault.default).all([
-            (0, _axiosDefault.default)(baseURL + "directors/" + director_id, {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`
-                }
-            }),
-            (0, _axiosDefault.default)(baseURL + "movies/", {
-                headers: {
-                    Authorization: `Bearer ${accessToken}`
-                }
-            })
-        ]).then((0, _axiosDefault.default).spread((directorData, moviesData)=>{
-            setDirector(directorData.data);
-            setMovies(moviesData.data);
-            moviesData.data.forEach((movie)=>{
-                if (movie.Director === director_id) setDirectorMovies((prevData)=>{
-                    return [
-                        ...prevData,
-                        movie
-                    ];
-                });
-            });
-        })).catch((error)=>console.error(error)).finally(()=>{
-            setLoading(false);
-        });
-    }
-    //While data is not showed - show spinner
-    if (loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        className: "justify-content-center my-5",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "h3 text-muted text-center",
-            children: [
-                "Data is loading \xa0",
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Spinner), {
-                    animation: "border",
-                    variant: "secondary",
-                    role: "status"
-                }, void 0, false, {
-                    fileName: "src/components/director-view/director-view.jsx",
-                    lineNumber: 52,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/director-view/director-view.jsx",
-            lineNumber: 51,
-            columnNumber: 9
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/director-view/director-view.jsx",
-        lineNumber: 50,
-        columnNumber: 10
-    }, this);
-    if (error1) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
-        className: "justify-content-center my-5",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-            children: "There was an error loading your data!"
-        }, void 0, false, {
-            fileName: "src/components/director-view/director-view.jsx",
-            lineNumber: 59,
-            columnNumber: 5
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/director-view/director-view.jsx",
-        lineNumber: 58,
-        columnNumber: 10
-    }, this);
+function DirectorView(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -46274,7 +46192,7 @@ function DirectorView() {
                             children: director.Name
                         }, void 0, false, {
                             fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 67,
+                            lineNumber: 18,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.ListGroup).Item, {
@@ -46282,18 +46200,18 @@ function DirectorView() {
                             children: director.Bio
                         }, void 0, false, {
                             fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 68,
+                            lineNumber: 19,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/director-view/director-view.jsx",
-                    lineNumber: 66,
+                    lineNumber: 17,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/director-view/director-view.jsx",
-                lineNumber: 65,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.ListGroup), {
@@ -46310,22 +46228,22 @@ function DirectorView() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/director-view/director-view.jsx",
-                                    lineNumber: 75,
+                                    lineNumber: 26,
                                     columnNumber: 21
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/components/director-view/director-view.jsx",
-                                lineNumber: 74,
+                                lineNumber: 25,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 73,
+                            lineNumber: 24,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/director-view/director-view.jsx",
-                        lineNumber: 72,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Row), {
@@ -46337,40 +46255,35 @@ function DirectorView() {
                                     movieData: movie
                                 }, void 0, false, {
                                     fileName: "src/components/director-view/director-view.jsx",
-                                    lineNumber: 80,
+                                    lineNumber: 31,
                                     columnNumber: 46
                                 }, this)
                             }, movie._id, false, {
                                 fileName: "src/components/director-view/director-view.jsx",
-                                lineNumber: 80,
+                                lineNumber: 31,
                                 columnNumber: 18
                             }, this)) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
                             md: 3,
                             children: "There are no movies of this director"
                         }, void 0, false, {
                             fileName: "src/components/director-view/director-view.jsx",
-                            lineNumber: 80,
+                            lineNumber: 31,
                             columnNumber: 95
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/director-view/director-view.jsx",
-                        lineNumber: 79,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/director-view/director-view.jsx",
-                lineNumber: 71,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(DirectorView, "d91iZfKJmWRg6VTEfJJWT0ru7Fw=", false, function() {
-    return [
-        (0, _reactRouterDom.useParams)
-    ];
-});
 _c = DirectorView;
 DirectorView.propTypes = {
     director: (0, _propTypesDefault.default).shape({

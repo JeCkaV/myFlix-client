@@ -27,9 +27,8 @@
 }
 
 #bs-override .btn.btn-link {
-  color: #fff;
   cursor: pointer;
-  background-color: #007bff;
+  background-color: #f5f5f5;
   border-color: #007bff;
   text-decoration: underline;
 }
