@@ -1,0 +1,104 @@
+.navbar {
+  height: 6rem;
+  font-family: Bebas Neue, San Francisco, Helvetica Neue;
+  font-size: 2rem;
+}
+
+.navbar-brand {
+  font-size: xxx-large !important;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #4169e1;
+}
+
+#registration-view-container {
+  margin-top: 25px;
+}
+
+#registration-view-card-title {
+  font-size: xx-large;
+}
+
+#registration-view-button {
+  margin-top: 10px;
+}
+
+.poster {
+  height: auto;
+  opacity: 1 !important;
+  cursor: default !important;
+  max-width: 25rem !important;
+}
+
+#bs-override .card-title, #bs-override .card-text {
+  color: #000;
+}
+
+#bs-override .custom-movie-card {
+  min-height: 624px;
+  margin-bottom: 30px;
+}
+
+#bs-override .custom-movie-card .card-img {
+  width: fit-content;
+  position: absolute;
+}
+
+#bs-override .custom-movie-card .card-img-top {
+  max-height: 500px;
+}
+
+#bs-override .custom-movie-card .card-body-list {
+  height: 260px;
+}
+
+#bs-override .card-body {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+#bs-override .btn.btn-link {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border-color: #007bff;
+  text-decoration: underline;
+}
+
+#bs-override .card-title {
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d4470;
+  border-color: #0d6efd;
+}
+
+.h5, h5 {
+  font-family: Pathway Gothic One, sans-serif;
+  font-size: 1.375rem;
+}
+
+.card {
+  background-color: #efefef;
+  border: none;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.my-flix {
+  color: #a1b7ca;
+}
+
+/*# sourceMappingURL=index.5fb39247.css.map */
