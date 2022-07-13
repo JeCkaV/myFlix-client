@@ -1,18 +1,4 @@
-* {
-  box-sizing: border-box;
-  background-color: blueviolet;
-  color: white;
-}
-
-#login-view-container {
-  margin-top: 25px;
-}
-
-#login-view-card-title {
-  font-size: xx-large;
-
-}
-
-#login-view-submit-button {
-  margin-top: 10px;
+#bs-override .error {
+  color: #f00;
+  font-size: 0.8rem;
 }

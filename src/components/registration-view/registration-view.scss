@@ -1,18 +1,4 @@
-* {
-  box-sizing: border-box;
-  background-color: royalblue;
-  color: white;
-}
-
-#registration-view-container {
-  margin-top: 25px;
-}
-
-#registration-view-card-title {
-  font-size: xx-large;
-
-}
-
-#registration-view-button {
-  margin-top: 10px;
+#bs-override .error {
+  color: #f00;
+  font-size: 0.8rem;
 }

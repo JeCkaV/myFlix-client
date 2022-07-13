@@ -47,22 +47,9 @@
   font-size: xxx-large !important;
 }
 
-* {
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #4169e1;
-}
-
-#registration-view-container {
-  margin-top: 25px;
-}
-
-#registration-view-card-title {
-  font-size: xx-large;
-}
-
-#registration-view-button {
-  margin-top: 10px;
+#bs-override .error {
+  color: red;
+  font-size: .8rem;
 }
 
 .poster {
@@ -133,23 +120,7 @@
   margin: 0;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #0d4470;
-  border-color: #0d6efd;
-}
 
-.h5, h5 {
-  font-family: Pathway Gothic One, sans-serif;
-  font-size: 1.375rem;
-}
-
-.card {
-  background-color: #efefef;
-  border: none;
-  border-radius: 10px;
-  margin: 15px;
-}
 
 .my-flix {
   color: #a1b7ca;
