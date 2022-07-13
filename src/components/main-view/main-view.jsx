@@ -23,6 +23,7 @@ import { GenreView } from '../genre-view/genre-view';
 import ProfileView from '../profile-view/profile-view';
 import { Container, Col, Row } from 'react-bootstrap';
 import { NavbarView as MenuBar } from "../navigationbar-view/navigationbar-view";
+import ProfileView from '../profile-view/profile-view';
 
 import './main-view.scss';
 

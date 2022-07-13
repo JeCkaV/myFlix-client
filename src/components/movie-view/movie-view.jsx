@@ -74,7 +74,7 @@ export class MovieView extends React.Component {
                             <Card.Text>Genre: {movie.Genre.Name}</Card.Text>
                             <Card.Text>Synopsis: {movie.Description} </Card.Text>
                             <Card.Text>Director: {movie.Director.Name} </Card.Text>
-                            <Card.Text> About the director: {movie.Director.Bio} </Card.Text>
+                            
                             <Route path=".movies/:movieId" render={({ match, history }) => {
                                 return <Col md={8}>
                                     <MovieView movie={movie.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
