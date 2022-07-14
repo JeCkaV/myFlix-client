@@ -10,7 +10,7 @@ import {FavoritesView} from './favorite-view'
 
 export function ProfileView(props) {
 
-  const baseURL = 'https://radiant-depths-97196.herokuapp.com//';
+  const baseURL = 'https://radiant-depths-97196.herokuapp.com/';
   const accessToken = localStorage.getItem('token');
   const activeUser = localStorage.getItem('user');
 
@@ -28,47 +28,46 @@ export function ProfileView(props) {
   },[])
 
   async function getMissingData() {
-	axios.all([
-		  axios(baseURL + 'users/' + activeUser,{ headers: { Authorization: `Bearer ${accessToken}`} } ),
-		  axios(baseURL + 'movies/',{ headers: { Authorization: `Bearer ${accessToken}`} } )
-		  ])
-			.then(axios.spread((userData, moviesData) => {
-			  setUser(userData.data)
-			  setMovies(moviesData.data)		  
-			}))
-			.catch(error => console.error(error))
-			.finally(() => {
-			  setLoading(false)
-			})												
+    axios.all([
+        axios(baseURL + 'users/' + activeUser,{ headers: { Authorization: `Bearer ${accessToken}`} } ),
+        axios(baseURL + 'movies/',{ headers: { Authorization: `Bearer ${accessToken}`} } )
+        ])
+        .then(axios.spread((userData, moviesData) => {
+          setUser(userData.data)
+          setMovies(moviesData.data)		  
+        }))
+        .catch(error => console.error(error))
+        .finally(() => {
+          setLoading(false)
+        })												
   }
 
-  
+    
   const parseDate = (date) => {
-	  console.log(date);
-	let newDate = date.split('T');
-	return newDate[0]
-}
+    let newDate = date.split('T');
+    return newDate[0]
+  }
 
-const toggleUpdateShow = () => {
-  setIsUpdate((prevData) => {
-	  return !prevData;    
-  })
-}
+  const toggleUpdateShow = () => {
+    setIsUpdate((prevData) => {
+      return !prevData;    
+    })
+  }
 
-function handleDelete () {
-console.log(baseURL+ 'users/'+user.Username)
-  axios.delete(baseURL+ 'users/'+user.Username, { headers: { Authorization: `Bearer ${accessToken}`} })
-  .then(response => {
-	  console.log(response.data);
-	  alert("Your account has been deleted. Thank you for using this API Service.");
-	  localStorage.clear();
-	  window.open("/", "_self");
-	  })
-  .catch(error => {
-	  console.log(error);
-	  setError(error);
-  }) 
-}
+  function handleDelete () {
+  console.log(baseURL+ 'users/'+user.Username)
+    axios.delete(baseURL+ 'users/'+user.Username, { headers: { Authorization: `Bearer ${accessToken}`} })
+    .then(response => {
+      console.log(response.data);
+      alert("Your account has been deleted. Thank you for using this API Service.");
+      localStorage.clear();
+      window.open("/", "_self");
+      })
+    .catch(error => {
+      console.log(error);
+      setError(error);
+    }) 
+  }
 
    	if (error) {
     return <Row className="justify-content-center my-5">

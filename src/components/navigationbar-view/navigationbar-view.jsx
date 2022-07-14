@@ -35,7 +35,7 @@ export function NavbarView() {
 							  <Link to="/">
 								  <Nav.Link href="#api">Movies</Nav.Link>
 							  </Link>
-							  <Link to="/profile">
+							  <Link to={`/users/${user}`}>
 								<Nav.Link href={`/users/${user}`}>Profile</Nav.Link>
 							  </Link>
 						  		</Nav>

@@ -20,10 +20,9 @@ import { MovieView } from '../movie-view/movie-view';
 // import { MovieCard } from '../movie-card/movie-card';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view'; 
-import ProfileView from '../profile-view/profile-view';
+import { ProfileView } from '../profile-view/profile-view';
 import { Container, Col, Row } from 'react-bootstrap';
 import { NavbarView as MenuBar } from "../navigationbar-view/navigationbar-view";
-import ProfileView from '../profile-view/profile-view';
 
 import './main-view.scss';
 
@@ -171,9 +170,7 @@ class MainView extends React.Component {
                     }} />
                         {/* ProfileView */}
                     <Route path={`/users/${user}`} render={({ history }) => {
-                        //IF statement removed because it was causing issues with ProfileView
-                        //  if (!user) return <Redirect to="/"
-                        // />
+                        if (!user) return <Col><LoginView onLoggedIn={user => this.onLoggedIn(user)} /></Col>
                         return <Col>
                             <ProfileView movies={movies} user={user} onBackClick={() => history.goBack()} />
                         </Col>

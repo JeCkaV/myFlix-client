@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 
 export function UpdateView(props) {
 
-  const baseURL = 'https://radiant-depths-97196.herokuapp.com//';
+  const baseURL = 'https://radiant-depths-97196.herokuapp.com/';
   const accessToken = localStorage.getItem('token');
 
   const [user, setUser] = useState(props.user)
