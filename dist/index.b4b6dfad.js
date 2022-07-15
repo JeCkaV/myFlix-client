@@ -46642,7 +46642,7 @@ var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _s = $RefreshSig$();
 function UpdateView(props) {
     _s();
-    const baseURL = "https://radiant-depths-97196.herokuapp.com//";
+    const baseURL = "https://radiant-depths-97196.herokuapp.com/";
     const accessToken = localStorage.getItem("token");
     const [user, setUser] = (0, _react.useState)(props.user);
     const [updateUser, setUpdateUser] = (0, _react.useState)(props.user);
@@ -46655,7 +46655,7 @@ function UpdateView(props) {
     };
     const handleSubmit = (e)=>{
         e.preventDefault();
-        (0, _axiosDefault.default).put(baseURL + "users/" + user.Username + "/update", {
+        (0, _axiosDefault.default).put(baseURL + "users/" + user.Username, {
             Username: updateUser.Username,
             Password: updateUser.Password,
             Email: updateUser.Email,
@@ -46851,9 +46851,10 @@ function UserView(props) {
     const [user, setUser] = (0, _react.useState)(props.user);
     // const [isUpdate, setIsUpdate] = useState(false)
     const parseDate = (date)=>{
-        console.log(date);
-        let newDate = date.split("T");
-        return newDate[0];
+        if (date) {
+            let newDate = date.split("T");
+            return newDate[0];
+        }
     };
     const toggleUpdateShow = ()=>{
         setIsUpdate((prevData)=>{
@@ -46875,7 +46876,7 @@ function UserView(props) {
                                     children: "Username:"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 29,
                                     columnNumber: 84
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46883,13 +46884,13 @@ function UserView(props) {
                                     children: user.Username
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 29,
                                     columnNumber: 133
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/profile-view/user-view.jsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.ListGroup).Item, {
@@ -46900,7 +46901,7 @@ function UserView(props) {
                                     children: "Email:"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 29,
+                                    lineNumber: 30,
                                     columnNumber: 85
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46908,24 +46909,24 @@ function UserView(props) {
                                     children: user.Email
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 29,
+                                    lineNumber: 30,
                                     columnNumber: 131
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/profile-view/user-view.jsx",
-                            lineNumber: 29,
+                            lineNumber: 30,
                             columnNumber: 16
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/profile-view/user-view.jsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 15
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/profile-view/user-view.jsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 10
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Col), {
@@ -46941,7 +46942,7 @@ function UserView(props) {
                                     children: "Password:"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 35,
+                                    lineNumber: 36,
                                     columnNumber: 81
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46949,13 +46950,13 @@ function UserView(props) {
                                     children: "****"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 35,
+                                    lineNumber: 36,
                                     columnNumber: 130
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/profile-view/user-view.jsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 12
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.ListGroup).Item, {
@@ -46966,7 +46967,7 @@ function UserView(props) {
                                     children: "Birthday:"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 82
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46974,24 +46975,24 @@ function UserView(props) {
                                     children: parseDate(user.Birthday)
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/user-view.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 131
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/profile-view/user-view.jsx",
-                            lineNumber: 36,
+                            lineNumber: 37,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/profile-view/user-view.jsx",
-                    lineNumber: 34,
+                    lineNumber: 35,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/profile-view/user-view.jsx",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 10
             }, this)
         ]
@@ -47027,7 +47028,7 @@ var _movieCard = require("../movie-card/movie-card");
 var _s = $RefreshSig$();
 function FavoritesView(props) {
     _s();
-    const baseURL = "https://radiant-depths-97196.herokuapp.com//";
+    const baseURL = "https://radiant-depths-97196.herokuapp.com/";
     const [user, setUser] = (0, _react.useState)(props.user);
     const [favoriteMovies, setFavoriteMovies] = (0, _react.useState)("");
     const [movies, setMovies] = (0, _react.useState)(props.movies);

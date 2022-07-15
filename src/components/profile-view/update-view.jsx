@@ -21,7 +21,7 @@ export function UpdateView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-     axios.put(baseURL+'users/'+user.Username+'/update', 
+     axios.put(baseURL+'users/'+user.Username, 
       {
        Username: updateUser.Username,
        Password: updateUser.Password,

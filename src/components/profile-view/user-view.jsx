@@ -10,9 +10,10 @@ export function UserView(props) {
     // const [isUpdate, setIsUpdate] = useState(false)
 
     const parseDate = (date) => {
-        console.log(date);
-      let newDate = date.split('T');
-      return newDate[0]
+        if (date) {
+            let newDate = date.split('T');
+            return newDate[0];
+        }
 }
 
 const toggleUpdateShow = () => {

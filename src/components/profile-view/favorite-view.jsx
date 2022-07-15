@@ -5,7 +5,7 @@ import { MovieCard} from '../movie-card/movie-card'
 
 export function FavoritesView(props) {
 
-  const baseURL = 'https://radiant-depths-97196.herokuapp.com//';
+  const baseURL = 'https://radiant-depths-97196.herokuapp.com/';
   
   const [user, setUser] = useState(props.user);
   const [favoriteMovies, setFavoriteMovies] = useState('');
